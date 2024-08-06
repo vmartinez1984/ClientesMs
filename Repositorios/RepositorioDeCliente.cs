@@ -1,4 +1,5 @@
 using ClientesMs.Entidades;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace ClientesMs.Repositorios
@@ -9,17 +10,18 @@ namespace ClientesMs.Repositorios
 
         public RepositorioDeCliente(IConfiguration configurations)
         {
+            //var conectionString = configurations.GetConnectionString("MongoDb");
             var mongoClient = new MongoClient(
                 configurations.GetConnectionString("MongoDb")
             );
-            var nombreDeLaDb = configurations.GetSection("MongoDbNombre").Value;
+            var nombreDeLaDb = configurations.GetConnectionString("MongoDbNombre");
             var mongoDatabase = mongoClient.GetDatabase(nombreDeLaDb);
             _collection = mongoDatabase.GetCollection<Cliente>("Clientes");
         }
 
-        internal async Task<int> AgregarAsync(Cliente item)
+        internal async Task<string> AgregarAsync(Cliente item)
         {
-            item.Id = ((int)await _collection.CountDocumentsAsync(_ => true)) + 1;
+            item.Id = (((int)await _collection.CountDocumentsAsync(_ => true)) + 1).ToString();
             await _collection.InsertOneAsync(item);
 
             return item.Id;
@@ -35,6 +37,16 @@ namespace ClientesMs.Repositorios
         internal async Task Actualizar(Cliente item)
         {
             await _collection.ReplaceOneAsync(item._id, item);
+        }
+
+        internal async Task<Cliente> ObtenerPorIdAsync(string id)
+        {
+            return (await _collection.FindAsync(
+            new BsonDocument("$or", new BsonArray
+            {
+                new BsonDocument("Id", id),
+                new BsonDocument("EncodedKey",id)
+            }))).FirstOrDefault();
         }
     }
 }

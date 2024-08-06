@@ -8,6 +8,8 @@ namespace ClientesMs.Ayudantes
     {
         public Mapeador()
         {
+            CreateMap<DireccionDto, Direccion>().ReverseMap();
+
             CreateMap<ClienteDtoIn, Cliente>();
 
             CreateMap<Cliente, ClienteDto>();

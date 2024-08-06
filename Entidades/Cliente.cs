@@ -9,7 +9,7 @@ namespace ClientesMs.Entidades
         [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string EncodedKey { get; set; }
 

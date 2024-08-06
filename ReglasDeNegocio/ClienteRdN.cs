@@ -16,15 +16,37 @@ namespace ClientesMs.ReglasDeNegocio
             _mapper = mapper;
         }
         
-        public async Task<int> AgregarAsync(ClienteDto dto)
+        public async Task<string> AgregarAsync(ClienteDto dto)
         {
-            int id;
+            string id;
             Cliente  cliente;
 
             cliente = _mapper.Map<Cliente>(dto);
             id = await _repositorio.AgregarAsync(cliente);
 
             return id;
+        }
+
+        public async Task<List<ClienteDto>> ObtenerTodosAsync()
+        {
+            List<ClienteDto> dtos;
+            List<Cliente> clientes;
+
+            clientes = await _repositorio.ObtenerTodosAsync();
+            dtos = _mapper.Map<List<ClienteDto>>(clientes);
+
+            return dtos;            
+        }
+
+        internal async Task<ClienteDto> ObtenerPorIdAsync(string id)
+        {
+            ClienteDto dto;
+            Cliente cliente;
+
+            cliente = await _repositorio.ObtenerPorIdAsync(id);
+            dto = _mapper.Map<ClienteDto>(cliente);
+
+            return dto;
         }
     }
 }

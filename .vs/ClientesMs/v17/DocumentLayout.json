@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\reglasdenegocio\\clienterdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:reglasdenegocio\\clienterdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\repositorios\\repositoriodecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:repositorios\\repositoriodecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|c:\\users\\vmartinez\\source\\repos\\vmartinez1984\\clientesms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E58844C-48BA-475E-81B4-DFD846DF4ECB}|ClientesMs.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 167,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Entidades\\Cliente.cs",
+              "RelativeDocumentMoniker": "Entidades\\Cliente.cs",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Entidades\\Cliente.cs",
+              "RelativeToolTip": "Entidades\\Cliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T00:08:25.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RepositorioDeCliente.cs",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Repositorios\\RepositorioDeCliente.cs",
+              "RelativeDocumentMoniker": "Repositorios\\RepositorioDeCliente.cs",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Repositorios\\RepositorioDeCliente.cs",
+              "RelativeToolTip": "Repositorios\\RepositorioDeCliente.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAASwBcAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T23:55:34.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteRdN.cs",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\ReglasDeNegocio\\ClienteRdN.cs",
+              "RelativeDocumentMoniker": "ReglasDeNegocio\\ClienteRdN.cs",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\ReglasDeNegocio\\ClienteRdN.cs",
+              "RelativeToolTip": "ReglasDeNegocio\\ClienteRdN.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAASwBcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T23:46:07.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-05T23:34:22.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAASwBQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T23:33:44.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-05T23:34:24.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vmartinez\\source\\repos\\vmartinez1984\\ClientesMs\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-05T23:34:14.603Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 233,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
