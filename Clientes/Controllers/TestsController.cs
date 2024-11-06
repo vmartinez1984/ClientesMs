@@ -54,10 +54,13 @@ namespace ClientesMs.Controllers
         /// Hola mundo
         /// </summary>
         /// <returns></returns>
-        [HttpGet("HolaMundo")]
-        public IActionResult HolaMundo()
+        [HttpGet("HolaMundo/{saludo}")]
+        public IActionResult HolaMundo(string saludo)
         {
-            return Ok("Hola mundo, MicroServicio de Clientes");
+            if (string.IsNullOrEmpty(saludo))
+                return Ok("Hola mundo, MicroServicio de Clientes");
+
+            return Ok(saludo);
         }
     }
 }

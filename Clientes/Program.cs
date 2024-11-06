@@ -5,6 +5,7 @@ using ClientesMs.Repositorios;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Reflection;
+using VMtz84.Logger;
 
 var builder = WebApplication.CreateBuilder(args);
 // Configura Serilog
@@ -22,8 +23,6 @@ builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddScoped<RepositorioDeCliente>();
 builder.Services.AddScoped<ClienteRdN>();
-
-builder.Services.AddTransient<RequestResponseRepository>();
 
 //Mappers
 var mapperConfig = new MapperConfiguration(mapperConfig =>
