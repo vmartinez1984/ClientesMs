@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Dynamic;
-using System.Text.Json.Serialization;
-
-namespace ClientesMs.Ayudantes
+﻿namespace ClientesMs.Ayudantes
 {
     /// <summary>
     /// Registro de excepciones
@@ -13,6 +9,12 @@ namespace ClientesMs.Ayudantes
         private readonly ILogger<ExceptionMiddleware> logger;
         private readonly bool _mostrarError;
 
+        /// <summary>
+        /// Se incializan los servicios
+        /// </summary>
+        /// <param name="next"></param>
+        /// <param name="logger"></param>
+        /// <param name="configuration"></param>
         public ExceptionMiddleware(
             RequestDelegate next,
             ILogger<ExceptionMiddleware> logger,
@@ -60,5 +62,6 @@ namespace ClientesMs.Ayudantes
                     });
             }
         }
-    }
+
+    }//end class
 }

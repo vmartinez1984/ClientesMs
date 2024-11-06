@@ -41,8 +41,13 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Clientes Api",
-        Description = "Microservico para Clientes"
+        Title = "Clientes Api",        
+        Description = "Microservico para Clientes",
+        Contact = new OpenApiContact
+        {
+            Name = "Víctor Martínez",
+            Url = new Uri("mailto:ahal_tocob@hotmail.com")
+        }
     });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));

@@ -1,0 +1,7 @@
+services:
+  clientesms:
+    image: ${DOCKER_REGISTRY-}clientesms
+    build:
+      context: Clientes
+      dockerfile: Dockerfile
+

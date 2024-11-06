@@ -14,6 +14,11 @@ namespace ClientesMs.Ayudantes
         private RequestDelegate _next;
         private readonly RequestResponseRepository _requestRepository;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="next"></param>
+        /// <param name="requestRepository"></param>
         public RequestResponseMiddleware(
             RequestDelegate next,
             RequestResponseRepository requestRepository

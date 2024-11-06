@@ -2,6 +2,9 @@
 
 namespace ClientesMs.Controllers
 {
+    /// <summary>
+    /// Controller para pruebas
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class TestsController : ControllerBase
@@ -9,6 +12,11 @@ namespace ClientesMs.Controllers
         private readonly IConfiguration configuration;
         private readonly ILogger<TestsController> logger;
 
+        /// <summary>
+        /// Contructor
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="logger"></param>
         public TestsController(IConfiguration configuration, ILogger<TestsController> logger)
         {
             this.configuration = configuration;
