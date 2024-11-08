@@ -1,7 +1,31 @@
+version: '3.9'
+
 services:
   clientesms:
     image: ${DOCKER_REGISTRY-}clientesms
+    container_name: clientes-ms
     build:
       context: Clientes
       dockerfile: Dockerfile
+    depends_on:
+      - mongodb  # Esto asegura que MongoDB esté listo antes de iniciar el servicio clientesms 
+    ports:
+      - "8480:80"  # Mapea el puerto para acceder a la app desde fuera del contenedor
+      - "8443:443"
+    networks:
+      - app-network
 
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"  # Mapea el puerto para acceder a MongoDB desde fuera del contenedor
+    environment:      
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

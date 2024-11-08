@@ -8,14 +8,15 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>.</DockerfileContext>
 		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-	</PropertyGroup>
+		<RepositoryUrl>https://nuget.pkg.github.com/vmartinez1984/index.json</RepositoryUrl>		
+	</PropertyGroup>	
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="13.0.1" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="VMtz84.Logger" Version="1.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+		<PackageReference Include="System.Text.Json" Version="8.0.5" />
+		<PackageReference Include="VMtz84.Logger" Version="1.1.3" />
 	</ItemGroup>
 
 </Project>

@@ -4,17 +4,22 @@ using MongoDB.Driver;
 
 namespace ClientesMs.Repositorios
 {
+    /// <summary>
+    /// Repositorio de clientes
+    /// </summary>
     public class RepositorioDeCliente
     {
         private readonly IMongoCollection<Cliente> _collection;
 
+        /// <summary>
+        /// Configuracion de la mongodb en el constructor
+        /// </summary>
+        /// <param name="configurations"></param>
         public RepositorioDeCliente(IConfiguration configurations)
         {
-            //var conectionString = configurations.GetConnectionString("MongoDb");
-            var mongoClient = new MongoClient(
-                configurations.GetConnectionString("MongoDb")
-            );
-            var nombreDeLaDb = configurations.GetConnectionString("MongoDbNombre");
+            var conectionString = configurations.GetConnectionString("MongoDb");
+            var mongoClient = new MongoClient( conectionString);
+            var nombreDeLaDb = conectionString.Split("/").Last().Split("?").First();
             var mongoDatabase = mongoClient.GetDatabase(nombreDeLaDb);
             _collection = mongoDatabase.GetCollection<Cliente>("Clientes");
         }

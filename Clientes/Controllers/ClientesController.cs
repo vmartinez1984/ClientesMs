@@ -4,15 +4,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ClientesMs.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class ClientesController : ControllerBase
     {
         private readonly ClienteRdN _cliente;
 
-        public ClientesController(ClienteRdN cliente)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cliente"></param>
+        public ClientesController(ClienteRdN cliente, ILogger<ClientesController> logger)
         {
             _cliente = cliente;
+            logger.LogInformation("Iniciando");
         }
 
        /// <summary>
@@ -61,6 +69,7 @@ namespace ClientesMs.Controllers
         /// Actualizar
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="cliente"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> ActualizarAsync(string id, ClienteDtoIn cliente)

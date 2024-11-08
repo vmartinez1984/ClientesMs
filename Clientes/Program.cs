@@ -4,8 +4,9 @@ using ClientesMs.ReglasDeNegocio;
 using ClientesMs.Repositorios;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Serilog.Debugging;
 using System.Reflection;
-using VMtz84.Logger;
+using VMtz84.Logger.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 // Configura Serilog
@@ -18,7 +19,7 @@ Log.Logger = new LoggerConfiguration()
 // Reemplaza el logger predeterminado por Serilog
 builder.Host.UseSerilog();
 //Muestra el error de serilog
-//SelfLog.Enable(Console.Error);
+SelfLog.Enable(Console.Error);
 
 // Add services to the container.
 builder.Services.AddScoped<RepositorioDeCliente>();
@@ -52,8 +53,20 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("*")
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithExposedHeaders("*");
+    });
+});
+
 var app = builder.Build();
 
+app.UseCors();
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI(

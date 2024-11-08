@@ -5,17 +5,30 @@ using ClientesMs.Repositorios;
 
 namespace ClientesMs.ReglasDeNegocio
 {
+    /// <summary>
+    /// Reglas de negocio de clientes
+    /// </summary>
     public class ClienteRdN
     {
         private readonly RepositorioDeCliente _repositorio;
         private readonly IMapper _mapper;
 
+        /// <summary>
+        /// Inyeccion del maper y el repositorio
+        /// </summary>
+        /// <param name="repositorio"></param>
+        /// <param name="mapper"></param>
         public ClienteRdN(RepositorioDeCliente repositorio,IMapper mapper )
         {
             _repositorio = repositorio;
             _mapper = mapper;
         }
         
+        /// <summary>
+        /// Agregar cliente
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<string> AgregarAsync(ClienteDto dto)
         {
             string id;
@@ -27,6 +40,10 @@ namespace ClientesMs.ReglasDeNegocio
             return id;
         }
 
+        /// <summary>
+        /// Obtener todos los clientes
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<ClienteDto>> ObtenerTodosAsync()
         {
             List<ClienteDto> dtos;

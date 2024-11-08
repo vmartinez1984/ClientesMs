@@ -33,7 +33,7 @@ namespace ClientesMs.Controllers
             string ambiente = configuration.GetSection("Ambiente").Value;
             logger.LogInformation($"Ambiente: {ambiente}");
 
-            return Ok(new { Ambiente = ambiente });
+            return Ok(new { Mensaje = ambiente, Fecha = DateTime.Now, Id = Guid.NewGuid() });
         }
 
         /// <summary>
@@ -54,13 +54,13 @@ namespace ClientesMs.Controllers
         /// Hola mundo
         /// </summary>
         /// <returns></returns>
-        [HttpGet("HolaMundo/{saludo}")]
+        [HttpGet("HolaMundo")]
         public IActionResult HolaMundo(string saludo)
         {
             if (string.IsNullOrEmpty(saludo))
-                return Ok("Hola mundo, MicroServicio de Clientes");
+               saludo = "Hola mundo";
 
-            return Ok(saludo);
+            return Ok(new { Mensaje = saludo, Fecha = DateTime.Now, Id = Guid.NewGuid() });
         }
     }
 }
