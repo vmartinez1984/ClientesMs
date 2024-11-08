@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "945d7c32-cac9-43ae-a498-8dfe0d857b18",
+		"name": "Clientes Ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2660252"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Cliente fake",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Cliente fake\", function () {\r",
+									"    var jsonData = pm.response.json();    \r",
+									"    pm.collectionVariables.set(\"firstName\", jsonData.firstName)\r",
+									"    pm.collectionVariables.set(\"lastName\", jsonData.lastName)\r",
+									"    pm.collectionVariables.set(\"mobilePhone\", jsonData.mobilePhone)\r",
+									"    pm.collectionVariables.set(\"curp\", jsonData.curp)\r",
+									"    pm.collectionVariables.set(\"rfc\", jsonData.rfc)\r",
+									"    pm.collectionVariables.set(\"primerApellido\", jsonData.primerApellido)\r",
+									"    pm.collectionVariables.set(\"emailAddress\", jsonData.emailAddress)\r",
+									"    pm.collectionVariables.set(\"mobilePhone\", jsonData.mobilePhone)\r",
+									"    pm.collectionVariables.set(\"birthDate\", jsonData.birthDate)\r",
+									"    pm.collectionVariables.set(\"primerApellido\", jsonData.primerApellido)\r",
+									"    pm.collectionVariables.set(\"segundoApellido\", jsonData.segundoApellido)\r",
+									"    pm.collectionVariables.set(\"estadoCivilDatosCliente\", jsonData.estadoCivilDatosCliente)\r",
+									"    pm.collectionVariables.set(\"genero\", jsonData.genero)\r",
+									"    pm.collectionVariables.set(\"rfc\", jsonData.rfc)\r",
+									"    pm.collectionVariables.set(\"curp\", jsonData.curp)\r",
+									"    pm.collectionVariables.set(\"lugarDeNacimiento\", jsonData.lugarDeNacimiento)\r",
+									"    pm.collectionVariables.set(\"calle\", jsonData.calle)\r",
+									"    pm.collectionVariables.set(\"numeroInterior\", jsonData.numeroInterior)\r",
+									"    pm.collectionVariables.set(\"numeroExterior\", jsonData.numeroExterior)\r",
+									"    pm.collectionVariables.set(\"codigoPostal\", jsonData.codigoPostal)\r",
+									"    pm.collectionVariables.set(\"colonia\", jsonData.colonia)\r",
+									"    pm.collectionVariables.set(\"municipio\", jsonData.municipio)\r",
+									"    pm.collectionVariables.set(\"estado\", jsonData.estado)\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://utilidades.vmartinez84.xyz/api/PersonaFakes",
+							"protocol": "https",
+							"host": [
+								"utilidades",
+								"vmartinez84",
+								"xyz"
+							],
+							"path": [
+								"api",
+								"PersonaFakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"id\",jsonData.id)\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apellidos\": \"{{lastName}}\",\n    \"correo\": \"{{emailAddress}}\",\n    \"encodedKey\": \"{{rfc}}\",\n    \"nombre\": \"{{firstName}}\",\n    \"telefono\": \"{{mobilePhone}}\",\n    \"direcciones\": [\n        {\n            \"alcaldia\": \"{{municipio}}\",\n            \"calleYNumero\": \"{{$randomStreetAddress}}\",\n            \"codigoPostal\": \"{{codigoPostal}}\",\n            \"colonia\": \"{{colonia}}\",\n            \"estado\": \"{{estado}}\",\n            \"referencia\": \"{{$randomStreetName}}\",\n            \"CoordenadasGps\": \"{{$randomLatitude}},{{$randomLongitude}}\"\n        }\n    ],\n    \"otros\": {\n        \"Guid\": \"{{$guid}}\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellidos\": \"{{lastName}}\",\r\n    \"correo\": \"{{emailAddress}}\",\r\n    \"encodedKey\": \"{{rfc}}\",\r\n    \"nombre\": \"{{firstName}}\",\r\n    \"telefono\": \"{{mobilePhone}}\",\r\n    \"direcciones\": [\r\n        {\r\n            \"alcaldia\": \"{{municipio}}\",\r\n            \"calleYNumero\": \"{{$randomStreetAddress}}\",\r\n            \"codigoPostal\": \"{{codigoPostal}}\",\r\n            \"colonia\": \"{{colonia}}\",\r\n            \"estado\": \"{{estado}}\",\r\n            \"referencia\": \"{{$randomStreetName}}\",\r\n            \"CoordenadasGps\": \"{{$randomLatitude}},{{$randomLongitude}}\"\r\n        }\r\n    ],\r\n    \"otros\": {\r\n        \"Guid\": \"{{$guid}}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente by email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes/Correos/{{emailAddress}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"Correos",
+								"{{emailAddress}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Datos fijos",
+			"item": [
+				{
+					"name": "Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"apellidos\": \"Martinez Bravo\",\n  \"correo\": \"ahal_tocob@hotmail.com\",\n  \"encodedKey\": \"MABV8412056TA\",\n  \"nombre\": \"Víctor\",\n  \"telefono\": \"5532737357\",\n  \"direcciones\": [\n    {\n      \"alcaldia\": \"Cuauhtemoc\",\n      \"calleYNumero\": \"Bolivar 438\",\n      \"codigoPostal\": \"06800\",\n      \"colonia\": \"Obrera\",\n      \"estado\": \"Ciudad de México\",\n      \"referencia\": \"Esq torquemada\",\n      \"CoordenadasGps\": \"na\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Clientes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Error",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/Tests/Errores?error=No tomar cafe por las mañanas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"Tests",
+						"Errores"
+					],
+					"query": [
+						{
+							"key": "error",
+							"value": "No tomar cafe por las mañanas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hola mundo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7248/api/Tests/HolaMundo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7248",
+					"path": [
+						"api",
+						"Tests",
+						"HolaMundo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ambiente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7248/api/Tests/Ambiente",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7248",
+					"path": [
+						"api",
+						"Tests",
+						"Ambiente"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "firstName",
+			"value": ""
+		},
+		{
+			"key": "lastName",
+			"value": ""
+		},
+		{
+			"key": "mobilePhone",
+			"value": ""
+		},
+		{
+			"key": "curp",
+			"value": ""
+		},
+		{
+			"key": "rfc",
+			"value": ""
+		},
+		{
+			"key": "primerApellido",
+			"value": ""
+		},
+		{
+			"key": "emailAddress",
+			"value": ""
+		},
+		{
+			"key": "birthDate",
+			"value": ""
+		},
+		{
+			"key": "segundoApellido",
+			"value": ""
+		},
+		{
+			"key": "estadoCivilDatosCliente",
+			"value": ""
+		},
+		{
+			"key": "genero",
+			"value": ""
+		},
+		{
+			"key": "lugarDeNacimiento",
+			"value": ""
+		},
+		{
+			"key": "calle",
+			"value": ""
+		},
+		{
+			"key": "numeroInterior",
+			"value": ""
+		},
+		{
+			"key": "numeroExterior",
+			"value": ""
+		},
+		{
+			"key": "codigoPostal",
+			"value": ""
+		},
+		{
+			"key": "colonia",
+			"value": ""
+		},
+		{
+			"key": "municipio",
+			"value": ""
+		},
+		{
+			"key": "estado",
+			"value": ""
+		},
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}

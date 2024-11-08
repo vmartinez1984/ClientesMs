@@ -1,12 +1,15 @@
 # Clientes Microservicio
 
-El microservico registra clientes en una base de datos MongoDb, ademas se tiene configurado el servicio de serilog 
-para el registro de excepciones y el registro de peticiones.
+Este proyecto es un registro simple de clientes desarrolado en c# y mongoDb.
 
-Por hacer:
+El proyecto esta pensado como un microservico.
 
-[ ] Perfiles de plays
-[ ] Perfiles de publicación
-[ ] Docker y DockerCompose
-[ ] Curl en las peticiones
-[ ] Editar clientes
+## Para Docker
+
+Navegue hasta donde esta el archivo docker-compose.yml, ahi ejecute
+
+    ```bash
+    docker-compose up
+    ```
+
+##

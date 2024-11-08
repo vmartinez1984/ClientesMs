@@ -23,7 +23,7 @@ namespace ClientesMs.Entidades
 
         public List<Direccion> Direcciones { get; set; }
 
-        public bool EstaActivo {get; set; } 
+        public bool EstaActivo { get; set; } = true;
 
         public Dictionary<string,string> Otros { get; set; }
     }

@@ -32,6 +32,11 @@ namespace ClientesMs.Controllers
         public async Task<IActionResult> AgregarAsync(ClienteDto dto)
         {
             string id;
+            ClienteDto clienteDto;
+
+            clienteDto = await _cliente.ObtenerPorIdAsync(dto.EncodedKey);
+            if (clienteDto is not null)
+                return Ok(clienteDto);
 
             id = await _cliente.AgregarAsync(dto);
 
@@ -45,8 +50,10 @@ namespace ClientesMs.Controllers
         [HttpGet]
         public async Task<IActionResult> ObtenerTodosAsync()
         {
+
             var lista = await _cliente.ObtenerTodosAsync();
 
+            HttpContext.Response.Headers.Add("TotalDeRegistros", lista.Count().ToString());
             return Ok(lista);
         }
 

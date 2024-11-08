@@ -18,7 +18,7 @@ namespace ClientesMs.Repositorios
         public RepositorioDeCliente(IConfiguration configurations)
         {
             var conectionString = configurations.GetConnectionString("MongoDb");
-            var mongoClient = new MongoClient( conectionString);
+            var mongoClient = new MongoClient(conectionString);
             var nombreDeLaDb = conectionString.Split("/").Last().Split("?").First();
             var mongoDatabase = mongoClient.GetDatabase(nombreDeLaDb);
             _collection = mongoDatabase.GetCollection<Cliente>("Clientes");
@@ -40,7 +40,7 @@ namespace ClientesMs.Repositorios
         }
 
         internal async Task ActualizarAsync(Cliente item) =>
-            await _collection.ReplaceOneAsync(item._id, item);
+            await _collection.ReplaceOneAsync(x => x._id == item._id, item);
 
         internal async Task<Cliente> ObtenerPorIdAsync(string id)
         {
