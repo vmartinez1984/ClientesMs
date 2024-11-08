@@ -8,8 +8,8 @@ El proyecto esta pensado como un microservico.
 
 Navegue hasta donde esta el archivo docker-compose.yml, ahi ejecute
 
-    ```bash
+```bash
     docker-compose up
-    ```
+```
 
 ##
