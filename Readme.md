@@ -12,4 +12,6 @@ Navegue hasta donde esta el archivo docker-compose.yml, ahi ejecute
     docker-compose up
 ```
 
-##
+## Postman
+
+Contiene una colección postman para que realice pruebas unitarias de la app.
