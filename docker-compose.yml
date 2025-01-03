@@ -8,16 +8,13 @@ services:
       context: Clientes
       dockerfile: Dockerfile
     depends_on:
-      - mongodb  # Esto asegura que MongoDB esté listo antes de iniciar el servicio clientesms 
-    ports:
-      - "8480:80"  # Mapea el puerto para acceder a la app desde fuera del contenedor
-      - "8443:443"
+      - mongodb  # Esto asegura que MongoDB esté listo antes de iniciar el servicio clientesms      
     networks:
       - app-network
 
   mongodb:
     image: mongo:latest
-    container_name: mongodb
+    container_name: mongodb-clientes
     ports:
       - "27017:27017"  # Mapea el puerto para acceder a MongoDB desde fuera del contenedor
     environment:      

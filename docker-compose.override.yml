@@ -2,10 +2,17 @@ services:
   clientesms:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+     # - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__MongoDb=mongodb://root:123456@mongodb:27017/ClientesMs?ssl=false&authSource=admin
+      - RequestResponseMongoDb__ConnectionString=mongodb://root:123456@mongodb:27017?ssl=false&authSource=admin
+      - ExceptionLoggerMongoDb__ConnectionString=mongodb://root:123456@mongodb:27017?ssl=false&authSource=admin
+    # ports:
+    #   - "80"
+    #   - "443"
     ports:
-      - "80"
-      - "443"
+      - "8480:80"  # Mapea el puerto para acceder a la app desde fuera del contenedor
+    #  - "8443:443"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    #  - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
