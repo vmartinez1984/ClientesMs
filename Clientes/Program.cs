@@ -3,23 +3,10 @@ using ClientesMs.Ayudantes;
 using ClientesMs.ReglasDeNegocio;
 using ClientesMs.Repositorios;
 using Microsoft.OpenApi.Models;
-using Serilog;
-using Serilog.Debugging;
 using System.Reflection;
 using VMtz84.Logger.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
-// Configura Serilog
-Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)  // Lee configuración desde appsettings.json
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .CreateLogger();
-
-// Reemplaza el logger predeterminado por Serilog
-builder.Host.UseSerilog();
-//Muestra el error de serilog
-SelfLog.Enable(Console.Error);
 
 // Add services to the container.
 builder.Services.AddScoped<RepositorioDeCliente>();
@@ -87,6 +74,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-// Asegúrate de cerrar el logger al final del programa
-Log.CloseAndFlush();
